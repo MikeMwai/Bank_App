@@ -18,4 +18,12 @@ public class Bank
     {
         System.out.println("Status check ongoing...");
     }
+    public void loans()
+    {
+        System.out.println("A new loan has been borrowed...");
+    }
+    public void interests()
+    {
+        System.out.println("The interest is...");
+    }
 }
