@@ -26,7 +26,32 @@ public static void absa()
 
     switch (choice) {
         case 1 -> {
+            System.out.println("Create an account");
+            System.out.println("Kindly enter your full name:");
+            System.out.println("Enter your first name");
+            fname = String.valueOf(userinputs.nextLine());
+            userinputs.nextLine();
+            System.out.println("Enter your surname");
+            lname = String.valueOf(userinputs.nextLine());
+            System.out.println("Welcome  " + fname + "" + lname);
+            System.out.println("Kindly enter your phone number:");
+            phoneNumber = userinputs.nextInt();
+            userinputs.nextLine();
+            System.out.println("Enter your age ");
+            age = userinputs.nextInt();
+            userinputs.nextLine();
 
+            System.out.println("Kindly enter the details of your next of kin :");
+            System.out.println("Enter first name");
+            fname = String.valueOf(userinputs.nextLine());
+            System.out.println("Enter surname");
+            lname = String.valueOf(userinputs.nextLine());
+            System.out.println("Kindly enter phone number:");
+            phoneNumber = userinputs.nextInt();
+            userinputs.nextLine();
+            System.out.println("Your next of kin is:" + fname + " " + lname + " and their contacts are" + phoneNumber);
+            System.out.println("------------------------------------------------------------------------");
+            System.out.println("                     A new account has been created!                    ");
         }
         case 2 -> {
             System.out.println("Deposit money");
