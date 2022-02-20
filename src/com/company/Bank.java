@@ -1,10 +1,10 @@
 package com.company;
-
+import java.util.Scanner;
 public class Bank
 {
     public void account_creation()
     {
-        System.out.println("A new account has been created!");
+
     }
     public void deposits()
     {
@@ -27,3 +27,6 @@ public class Bank
         System.out.println("The interest is...");
     }
 }
+
+
+
