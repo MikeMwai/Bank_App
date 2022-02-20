@@ -3,11 +3,12 @@ package com.company;
 import java.util.Scanner;
 
 public class Abesa extends Bank {
-    Scanner userinputs = new Scanner(System.in);
+    Scanner userInputs = new Scanner(System.in);
 
 
     int cash = 0;
-    String fname, lname = "";
+    String fName, lName = "";
+    String f1Name, l2Name="";
     int phoneNumber;
     int age = 0;
     String sex = "";
@@ -15,11 +16,12 @@ public class Abesa extends Bank {
     int amount = 0;
     int available=0;
 
+
     public void available_services(){
         System.out.println("Welcome to Equity!!We are one with you!!");
 
         System.out.println("Kindly choose any option of your choice\t\n 1 to create an account  2 to deposit money\t\n\n" +
-                " 3 to withdrwaw money \t\n\n\n and  4 to request for a loan ");
+                " 3 to withdrwaw money \t\n\n\n 4 to request for a loan\t\n\n\n\n 5 to apply for a Visa and 6 to transfer money ");
         String choice = String.valueOf(5);
         switch (choice) {
             case 1: {
@@ -29,37 +31,37 @@ public class Abesa extends Bank {
                     System.out.println("Kindly enter your full name:");
 
                     System.out.println("Enter your first name");
-                    fname = String.valueOf(userinputs.nextLine());
-                    System.out.println(fname);
-                    userinputs.nextLine();
+                    fName = String.valueOf(userInputs.nextLine());
+                    System.out.println(fName);
+                    userInputs.nextLine();
 
                     System.out.println("Enter your surname");
-                    lname = String.valueOf(userinputs.nextLine());
-                    System.out.println("welcome" + fname + "" + lname);
-                    userinputs.nextLine();
+                    lName = String.valueOf(userInputs.nextLine());
+                    System.out.println("welcome" + fName + "" + lName);
+                    userInputs.nextLine();
 
                     System.out.println("Kindly enter your phone number:");
-                    phoneNumber=userinputs.nextInt();
+                    phoneNumber=userInputs.nextInt();
                     System.out.println(phoneNumber);
-                    userinputs.nextLine();
+                    userInputs.nextLine();
 
                     System.out.println("Enter your age ");
-                    age=userinputs.nextInt();
+                    age=userInputs.nextInt();
                     System.out.println(age);
-                    userinputs.nextLine();
+                    userInputs.nextLine();
 
                     System.out.println("Kindly enter the details of your next of kin :");
-                    fname = String.valueOf(userinputs.nextLine());
-                    System.out.println(fname);
-                    userinputs.nextLine();
-                    lname = String.valueOf(userinputs.nextLine());
-                    System.out.println(lname);
-                    userinputs.nextLine();
-                    phoneNumber=userinputs.nextInt();
+                    f1Name = String.valueOf(userInputs.nextLine());
+                    System.out.println(f1Name);
+                    userInputs.nextLine();
+                    l2Name = String.valueOf(userInputs.nextLine());
+                    System.out.println(l2Name);
+                    userInputs.nextLine();
+                    phoneNumber=userInputs.nextInt();
                     System.out.println(phoneNumber);
-                    userinputs.nextLine();
+                    userInputs.nextLine();
 
-                    System.out.println("Your next of kin is:"+fname+""+lname+"and their contacts are"+phoneNumber);
+                    System.out.println("Your next of kin is:"+f1Name+""+l2Name+"and their contacts are"+phoneNumber);
 
                 }
 
@@ -71,9 +73,9 @@ public class Abesa extends Bank {
 
                 public void deposits() {
                     System.out.println("Enter the amount you wish to deposit:");
-                    amount = userinputs.nextInt();
+                    amount = userInputs.nextInt();
                     System.out.println(amount);
-                    userinputs.nextLine();
+                    userInputs.nextLine();
                     if (amount <= 1000000) {
                         System.out.println("A new deposit has been made...");
                         System.out.println("Your new balance is" + amount + balance);
@@ -90,9 +92,9 @@ public class Abesa extends Bank {
 
                 public void withdrawals() {
                     System.out.println("Enter the amount you wish to withdraw:");
-                    available = userinputs.nextInt();
+                    available = userInputs.nextInt();
                     System.out.println(available);
-                    userinputs.nextLine();
+                    userInputs.nextLine();
                     if (available <= balance) {
                         System.out.println("A new withdrawal has been made...");
                         System.out.println("Your new balance is" + balance - available);
@@ -113,23 +115,23 @@ public class Abesa extends Bank {
                     System.out.println("Kindly enter your full name:");
 
                     System.out.println("Enter your first name");
-                    fname = String.valueOf(userinputs.nextLine());
-                    System.out.println(fname);
-                    userinputs.nextLine();
+                    fName = String.valueOf(userInputs.nextLine());
+                    System.out.println(fName);
+                    userInputs.nextLine();
 
                     System.out.println("Enter your surname");
-                    lname = String.valueOf(userinputs.nextLine());
-                    System.out.println("welcome" + fname + "" + lname);
-                    userinputs.nextLine();
+                    lName = String.valueOf(userInputs.nextLine());
+                    System.out.println("welcome" + fName + "" + lName);
+                    userInputs.nextLine();
 
                     System.out.println("Enter the amount you wish to be lent");
-                    cash = userinputs.nextInt();
+                    cash = userInputs.nextInt();
                     System.out.println("You want a loan of"+cash+"kenyan shillings:");
 
                     System.out.println("Enter your age ");
-                    age = userinputs.nextInt();
+                    age = userInputs.nextInt();
                     System.out.println(age);
-                    userinputs.nextLine();
+                    userInputs.nextLine();
 
 
                     if (age >= 18 && balance > cash) {
@@ -182,6 +184,95 @@ public class Abesa extends Bank {
                 }
 
             }
+            case 5:{
+                System.out.println("Application for a Visa");
+
+                System.out.println("Are you an account holder with this bank?\n 1 Yes 2 No");
+
+                int selection=userInputs.nextInt();
+                switch(selection){
+                    case 1:{
+                        System.out.println("Kindly enter your full name:");
+
+                        System.out.println("Enter your first name");
+                        fName = String.valueOf(userInputs.nextLine());
+                        System.out.println(fName);
+                        userInputs.nextLine();
+
+                        System.out.println("Enter your surname");
+                        lName = String.valueOf(userInputs.nextLine());
+                        System.out.println("welcome" + fName + "" + lName);
+                        userInputs.nextLine();
+
+                        System.out.println("Kindly enter your phone number:");
+                        phoneNumber=userInputs.nextInt();
+                        System.out.println(phoneNumber);
+                        userInputs.nextLine();
+
+                        System.out.println("Enter your age ");
+                        age=userInputs.nextInt();
+                        System.out.println(age);
+                        userInputs.nextLine();
+
+                        System.out.println("Kindly enter the details of your next of kin :");
+                        f1Name = String.valueOf(userInputs.nextLine());
+                        System.out.println(f1Name);
+                        userInputs.nextLine();
+                        l2Name = String.valueOf(userInputs.nextLine());
+                        System.out.println(l2Name);
+                        userInputs.nextLine();
+                        phoneNumber=userInputs.nextInt();
+                        System.out.println(phoneNumber);
+                        userInputs.nextLine();
+
+                        System.out.println("Your next of kin is:"+f1Name+""+l2Name+"and their contacts are"+phoneNumber);
+
+                        System.out.println("Thank you"+fName+""+lName+"we shall get back to you via email");
+                        break;
+                    }
+                    case 2:{
+                        System.out.println("Sorry!This feature is for account holders only. Kindly sent up an account with us");
+                        break;
+                    }
+                    default:
+                        System.out.println("Kindly choose one of the given choices");
+                }
+
+            break;
+            }
+            case 6: {
+                public void transferMoney () {
+                    System.out.println("Money Transfer");
+
+                System.out.println("Kindly enter your full name:");
+
+                System.out.println("Enter your first name");
+                fName = String.valueOf(userInputs.nextLine());
+                System.out.println(fName);
+                userInputs.nextLine();
+
+                System.out.println("Enter your surname");
+                lName = String.valueOf(userInputs.nextLine());
+                System.out.println("welcome" + fName + "" + lName);
+                userInputs.nextLine();
+
+                System.out.println("Enter the amount you wish to be send:");
+                cash = userInputs.nextInt();
+
+                System.out.println("Enter the name of the bank of the account you wish to send money to:");
+                String bankName = userInputs.nextLine();
+
+                System.out.println("Enter the number of the account you wish to send money to:");
+                int accountNumber = userInputs.nextInt();
+
+                System.out.println("You want to transfer" + cash + "kenyan shillings to" + accountNumber + bankName);
+
+
+            }
+
+
+                break;
+            }
             default:
                 System.out.println("Sorry invalid request try again ");
 
@@ -199,9 +290,9 @@ public class Abesa extends Bank {
 
     public void deposits() {
         System.out.println("Enter the amount you wish to deposit:");
-        amount = userinputs.nextInt();
+        amount = userInputs.nextInt();
         System.out.println(amount);
-        userinputs.nextLine();
+        userInputs.nextLine();
         if (amount <= 1000000) {
             System.out.println("A new deposit has been made...");
             System.out.println("Your new balance is" + amount + balance);
@@ -214,9 +305,9 @@ public class Abesa extends Bank {
 
     public void withdrawals() {
         System.out.println("Enter the amount you wish to withdraw:");
-        available = userinputs.nextInt();
+        available = userInputs.nextInt();
         System.out.println(available);
-        userinputs.nextLine();
+        userInputs.nextLine();
         if (available <= balance) {
             System.out.println("A new withdrawal has been made...");
             System.out.println("Your new balance is" + balance - available);
@@ -230,23 +321,23 @@ public class Abesa extends Bank {
         System.out.println("Kindly enter your full name:");
 
         System.out.println("Enter your first name");
-        fname = String.valueOf(userinputs.nextLine());
-        System.out.println(fname);
-        userinputs.nextLine();
+        fName = String.valueOf(userInputs.nextLine());
+        System.out.println(fName);
+        userInputs.nextLine();
 
         System.out.println("Enter your surname");
-        lname = String.valueOf(userinputs.nextLine());
-        System.out.println("welcome" + fname + "" + lname);
-        userinputs.nextLine();
+        lName = String.valueOf(userInputs.nextLine());
+        System.out.println("welcome" + fName + "" + lName);
+        userInputs.nextLine();
 
         System.out.println("Enter the amount you wish to be lent");
-        cash = userinputs.nextInt();
+        cash = userInputs.nextInt();
         System.out.println("You want a loan of"+cash+"kenyan shillings:");
 
         System.out.println("Enter your age ");
-        age = userinputs.nextInt();
+        age = userInputs.nextInt();
         System.out.println(age);
-        userinputs.nextLine();
+        userInputs.nextLine();
 
 
         if (age >= 18 && balance > cash) {
