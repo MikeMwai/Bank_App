@@ -2,26 +2,106 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Equity extends Bank {
+public class Equity extends Bank
+{
     //("Welcome to Equity!!Growing Together In Trust!!");
 
-    Scanner userinputs = new Scanner(System.in);
+    public static void equity()
+    {
+        Scanner userinputs = new Scanner(System.in);
 
 
-    int cash = 0;
-    String fname, lname = "";
-    int phoneNumber;
-    int age = 0;
-    String sex = "";
-    int balance = 25000;
-    int amount = 0;
-    int available=0;
+        int cash;
+        String fname, lname;
+        int phoneNumber;
+        int age;
+        int balance = 25000;
+        int amount;
+        int available;
 
-    public void available_services(){
+        System.out.println("Welcome to Equity!!Growing Together In Trust!!");
+
+        System.out.println("Kindly choose any option of your choice\n1)Create an account  \n2)Deposit money \n3)Withdraw money \n4)Request for a loan ");
+
+        int choice = userinputs.nextInt();
+
+        switch (choice) {
+            case 1 -> {
+
+            }
+            case 2 -> {
+                System.out.println("Deposit money");
+                System.out.println("Enter the amount you wish to deposit:");
+                amount = userinputs.nextInt();
+                System.out.println(amount);
+                userinputs.nextLine();
+                if (amount <= 1000000) {
+                    System.out.println("A new deposit has been made...");
+                    System.out.println("Your new balance is" + (amount + balance));
+                } else {
+                    System.out.println("contact the bank to verify this amount :");
+                }
+            }
+            case 3 -> {
+                System.out.println("Withdraw money");
+                System.out.println("Enter the amount you wish to withdraw:");
+                available = userinputs.nextInt();
+                System.out.println(available);
+                userinputs.nextLine();
+                if (available <= balance) {
+                    System.out.println("A new withdrawal has been made...");
+                    System.out.println("Your new balance is" + (balance - available));
+                } else {
+                    System.out.println("You do not have enough money in your account to cover the withdrawal :");
+                }
+            }
+            case 4 -> {
+                System.out.println("Request for a loan");
+                System.out.println("Kindly enter your full name:");
+                System.out.println("Enter your first name");
+                fname = String.valueOf(userinputs.nextLine());
+                userinputs.nextLine();
+                System.out.println("Enter your surname");
+                lname = String.valueOf(userinputs.nextLine());
+                System.out.println("Welcome " + fname + "" + lname);
+                System.out.println("Enter the amount you wish to be lent");
+                cash = userinputs.nextInt();
+                System.out.println("You want a loan of" + cash + " kenyan shillings:");
+                System.out.println("Enter your age ");
+                age = userinputs.nextInt();
+                userinputs.nextLine();
+                if (age >= 18 && balance > cash) {
+                    System.out.println("You're eligible for consideration");
+                } else {
+                    System.out.println("Sorry you do not meet the needed requirements:");
+                }
+                System.out.println("Enter \n1)Business loan \n2)Personal loan  \n3)Education loans \n4)Mortgage loan");
+                int cash1 = userinputs.nextInt();
+
+                switch (cash1) {
+                    case 1 -> System.out.println("Business loan Request");
+                    case 2 -> System.out.println("Personal loan request");
+                    case 3 -> System.out.println("Educational loan request");
+                    case 4 -> System.out.println("Mortgage loan request");
+                    default -> {
+                        System.out.println("Sorry invalid request try again ");
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {
+
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*public void available_services(){
         System.out.println("Welcome to Equity!!Growing Together In Trust!!");
 
         System.out.println("Kindly choose any option of your choice\t\n 1 to create an account  2 to deposit money\t\n\n" +
-                " 3 to withdrwaw money \t\n\n\n and  4 to request for a loan ");
+                " 3 to withdraw money \t\n\n\n and  4 to request for a loan ");
         String choice = String.valueOf(5);
         switch (choice) {
             case 1: {
@@ -194,108 +274,34 @@ public class Equity extends Bank {
                     e.printStackTrace();
                 }
         }
+    }*/
+
+    @Override
+    public void account_creation()
+    {
+        super.account_creation();
     }
 
-
-
-
-    public void deposits() {
-        System.out.println("Enter the amount you wish to deposit:");
-        amount = userinputs.nextInt();
-        System.out.println(amount);
-        userinputs.nextLine();
-        if (amount <= 1000000) {
-            System.out.println("A new deposit has been made...");
-            System.out.println("Your new balance is" + amount + balance);
-        } else {
-            System.out.println("contact the bank to verify this amount :");
-        }
-
-
+    @Override
+    public void deposits()
+    {
+        super.deposits();
     }
 
-    public void withdrawals() {
-        System.out.println("Enter the amount you wish to withdraw:");
-        available = userinputs.nextInt();
-        System.out.println(available);
-        userinputs.nextLine();
-        if (available <= balance) {
-            System.out.println("A new withdrawal has been made...");
-            System.out.println("Your new balance is" + balance - available);
-        } else {
-            System.out.println("You do not have enough money in your account to cover the withdrawal :");
-        }
-
+    @Override
+    public void withdrawals()
+    {
+        super.withdrawals();
     }
 
-    public void loans() {
-        System.out.println("Kindly enter your full name:");
-
-        System.out.println("Enter your first name");
-        fname = String.valueOf(userinputs.nextLine());
-        System.out.println(fname);
-        userinputs.nextLine();
-
-        System.out.println("Enter your surname");
-        lname = String.valueOf(userinputs.nextLine());
-        System.out.println("welcome" + fname + "" + lname);
-        userinputs.nextLine();
-
-        System.out.println("Enter the amount you wish to be lent");
-        cash = userinputs.nextInt();
-        System.out.println("You want a loan of"+cash+"kenyan shillings:");
-
-        System.out.println("Enter your age ");
-        age = userinputs.nextInt();
-        System.out.println(age);
-        userinputs.nextLine();
-
-
-        if (age >= 18 && balance > cash) {
-            System.out.println("Your eligible for consideration");
-
-        } else {
-            System.out.println("Sorry you do not meet the needed requirements:");
-
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-
-                e.printStackTrace();
-            }
-            System.out.println("enter 1 for business loan 2 for personal loan  3 for education loans 4 for mortgage loan");
-            int cash = 5;
-            switch (cash) {
-                case 1: {
-                    System.out.println("Business loan Request");
-
-                    break;
-                }
-                case 2: {
-                    System.out.println("Personal loan request");
-                    break;
-                }
-                case 3: {
-                    System.out.println("Educational loan request");
-
-
-                    break;
-                }
-                case 4: {
-
-                    System.out.println("Mortgage loan request");
-                    break;
-                }
-                default:
-                    System.out.println("Sorry invalid request try again ");
-
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-
-                        e.printStackTrace();
-                    }
-            }
-        }
+    @Override
+    public void loans()
+    {
+        super.loans();
     }
 }
+
+
+
+
+
