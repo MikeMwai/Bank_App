@@ -2,7 +2,7 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Abesa extends Bank {
+public class Absa extends Bank {
     Scanner userInputs = new Scanner(System.in);
 
 
