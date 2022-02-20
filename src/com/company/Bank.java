@@ -1,9 +1,9 @@
 package com.company;
-import java.util.Scanner;
+
 public class Bank
 {
-    public void account_creation()
-    {
+
+    public void create_account(){
 
     }
     public void deposits()
