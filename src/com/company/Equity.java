@@ -39,36 +39,44 @@ public class Equity extends Bank
     @Override
     public void account_creation()
     {
+        System.out.println("                    Create a new EQUITY account today!                    ");
+        System.out.println("------------------------------------------------------------------------");
         super.account_creation();
+        System.out.println("Thank you! And Welcome \nWe hope you will enjoy our services!");
     }
 
     @Override
     public void deposits()
     {
+        System.out.println("Deposit money easily at EQUITY!");
         super.deposits();
     }
 
     @Override
     public void withdrawals()
     {
+        System.out.println("Withdraw money easily at EQUITY!");
         super.withdrawals();
     }
 
     @Override
     public void loans()
     {
+        System.out.println("Request for a loan easily at EQUITY!");
         super.loans();
     }
 
     @Override
     public void transferMoney()
     {
+        System.out.println("Transfer money easily at EQUITY!");
         super.transferMoney();
     }
 
     @Override
     public void status_check()
     {
+        System.out.println("Monitor your account easily at EQUITY!");
         super.status_check();
     }
 }

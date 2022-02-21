@@ -34,4 +34,48 @@ public class National extends Bank
                     }
         }
     }
+
+    @Override
+    public void account_creation()
+    {
+        System.out.println("                    Create a new NATIONAL account today!                    ");
+        System.out.println("------------------------------------------------------------------------");
+        super.account_creation();
+    }
+
+    @Override
+    public void deposits()
+    {
+        System.out.println("Deposit money easily at NATIONAL!");
+        super.deposits();
+    }
+
+    @Override
+    public void withdrawals()
+    {
+        System.out.println("Withdraw money easily at NATIONAL!");
+        super.withdrawals();
+    }
+
+    @Override
+    public void loans()
+    {
+        System.out.println("Request for a loan easily at NATIONAL!");
+        super.loans();
+    }
+
+    @Override
+    public void transferMoney()
+    {
+        System.out.println("Transfer money easily at NATIONAL!");
+        super.transferMoney();
+    }
+
+    @Override
+    public void status_check()
+    {
+        System.out.println("Monitor your account easily at NATIONAL!");
+        super.status_check();
+    }
 }
+
