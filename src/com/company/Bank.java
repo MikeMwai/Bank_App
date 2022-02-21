@@ -21,10 +21,9 @@ public class Bank
         System.out.println("Kindly enter your full name:");
         System.out.println("Enter your first name");
         fname = String.valueOf(userinputs.nextLine());
-        userinputs.nextLine();
         System.out.println("Enter your surname");
         lname = String.valueOf(userinputs.nextLine());
-        System.out.println("Welcome  " + fname + "" + lname);
+        System.out.println("Welcome  " + fname + " " + lname);
         System.out.println("Kindly enter your phone number:");
         phoneNumber = userinputs.nextInt();
         userinputs.nextLine();
@@ -40,7 +39,7 @@ public class Bank
         System.out.println("Kindly enter phone number:");
         phoneNumber = userinputs.nextInt();
         userinputs.nextLine();
-        System.out.println("Your next of kin is:" + fname + " " + lname + " and their contacts are" + phoneNumber);
+        System.out.println("Your next of kin is:" + fname + " " + lname + " and their contacts are " + phoneNumber);
         System.out.println("------------------------------------------------------------------------");
         System.out.println("                     A new account has been created!                    ");
     }
@@ -48,13 +47,15 @@ public class Bank
     public void deposits()
     {
         System.out.println("Deposit money");
+        System.out.println("Enter account number:");
+        int accountNumber = userinputs.nextInt();
         System.out.println("Enter the amount you wish to deposit:");
         amount = userinputs.nextInt();
         System.out.println(amount);
         userinputs.nextLine();
         if (amount <= 1000000) {
-            System.out.println("A new deposit has been made...");
-            System.out.println("Your new balance is" + (amount + balance));
+            System.out.println("A new deposit has been credited on \nAccount No: "+accountNumber);
+            System.out.println("Your new balance is " + (amount + balance));
         } else {
             System.out.println("contact the bank to verify this amount :");
         }
@@ -63,13 +64,14 @@ public class Bank
     public void withdrawals()
     {
         System.out.println("Withdraw money");
+        System.out.println("Enter account number:");
+        int accountNumber = userinputs.nextInt();
         System.out.println("Enter the amount you wish to withdraw:");
         available = userinputs.nextInt();
-        System.out.println(available);
         userinputs.nextLine();
         if (available <= balance) {
-            System.out.println("A new withdrawal has been made...");
-            System.out.println("Your new balance is" + (balance - available));
+            System.out.println("A new withdrawal has been debited on \nAccount No: "+accountNumber);
+            System.out.println("Your new balance is " + (balance - available));
         } else {
             System.out.println("You do not have enough money in your account to cover the withdrawal :");
         }
@@ -88,7 +90,6 @@ public class Bank
         System.out.println("Kindly enter your full name:");
         System.out.println("Enter your first name");
         fname = String.valueOf(userinputs.nextLine());
-        userinputs.nextLine();
         System.out.println("Enter your surname");
         lname = String.valueOf(userinputs.nextLine());
         System.out.println("Welcome " + fname + "" + lname);
@@ -130,11 +131,10 @@ public class Bank
 
             System.out.println("Enter your first name");
             fname = String.valueOf(userinputs.nextLine());
-            userinputs.nextLine();
 
             System.out.println("Enter your surname");
             lname = String.valueOf(userinputs.nextLine());
-            System.out.println("Welcome " + fname + "" + lname);
+            System.out.println("Welcome " + fname + " " + lname);
 
             System.out.println("Enter the amount you wish to be send:");
             cash = userinputs.nextInt();
@@ -146,7 +146,7 @@ public class Bank
             System.out.println("Enter the account number you wish to send money to:");
             int accountNumber = userinputs.nextInt();
 
-            System.out.println("Transfer of " + cash + " kenyan shillings to " + accountNumber  +"completed!");
+            System.out.println("Transfer of " + cash + " kenyan shillings to \nAccount No: " + accountNumber  +" completed!");
         }
 
     }
