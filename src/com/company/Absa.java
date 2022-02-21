@@ -20,7 +20,7 @@ public static void absa()
 
     System.out.println("Welcome to Absa!!Growing Together In Trust!!");
 
-    System.out.println("Kindly choose any option of your choice\n1)Create an account  \n2)Deposit money \n3)Withdraw money \n4)Request for a loan ");
+    System.out.println("Kindly choose any option of your choice\n1)Create an account  \n2)Deposit money \n3)Withdraw money \n4)Request for a loan \n5)Transfer money");
 
     int choice = userinputs.nextInt();
 
@@ -118,6 +118,41 @@ public static void absa()
                 }
             }
         }
+        case 5->
+                {
+                    System.out.println("Money Transfer");
+
+                    System.out.println("Kindly enter your full name:");
+
+                    System.out.println("Enter your first name");
+                    fname = String.valueOf(userinputs.nextLine());
+                    userinputs.nextLine();
+
+                    System.out.println("Enter your surname");
+                    lname = String.valueOf(userinputs.nextLine());
+                    System.out.println("Welcome " + fname + "" + lname);
+
+                    System.out.println("Enter the amount you wish to be send:");
+                    cash = userinputs.nextInt();
+
+                    System.out.println("Enter the bank name of the account you wish to send money to:");
+                    String bankName = userinputs.nextLine();
+                    userinputs.nextLine();
+
+                    System.out.println("Enter the account number you wish to send money to:");
+                    int accountNumber = userinputs.nextInt();
+
+                    System.out.println("Transfer of " + cash + " kenyan shillings to " + accountNumber  +"completed!");
+                }
+        default -> {
+            System.out.println("Sorry invalid request try again ");
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+
+                e.printStackTrace();
+            }
+        }
     }
 }
 
@@ -143,5 +178,11 @@ public static void absa()
     public void loans()
     {
         super.loans();
+    }
+
+    @Override
+    public void transferMoney()
+    {
+        super.transferMoney();
     }
 }

@@ -118,5 +118,31 @@ public class Bank
             }
         }
     }
+    public void transferMoney()
+        {
+            System.out.println("Money Transfer");
+
+            System.out.println("Kindly enter your full name:");
+
+            System.out.println("Enter your first name");
+            fname = String.valueOf(userinputs.nextLine());
+            userinputs.nextLine();
+
+            System.out.println("Enter your surname");
+            lname = String.valueOf(userinputs.nextLine());
+            System.out.println("Welcome " + fname + "" + lname);
+
+            System.out.println("Enter the amount you wish to be send:");
+            cash = userinputs.nextInt();
+
+            System.out.println("Enter the bank name of the account you wish to send money to:");
+            String bankName = userinputs.nextLine();
+            userinputs.nextLine();
+
+            System.out.println("Enter the account number you wish to send money to:");
+            int accountNumber = userinputs.nextInt();
+
+            System.out.println("Transfer of " + cash + " kenyan shillings to " + accountNumber  +"completed!");
+        }
 
     }

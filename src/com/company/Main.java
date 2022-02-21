@@ -13,8 +13,8 @@ public class Main
         System.out.println("Choose one of the following \n1.) Absa Bank \n2.) Equity Bank");
 
         int choice = input.nextInt();
-        Absa absa=new Absa();
-        Equity equity=new Equity();
+        /*Absa absa=new Absa();
+        Equity equity=new Equity();*/
         switch (choice) {
             case 1 ->
                     Absa.absa();
