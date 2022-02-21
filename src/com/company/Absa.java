@@ -20,7 +20,7 @@ public static void absa()
 
     System.out.println("Welcome to Absa!!Growing Together In Trust!!");
 
-    System.out.println("Kindly choose any option of your choice\n1)Create an account  \n2)Deposit money \n3)Withdraw money \n4)Request for a loan \n5)Transfer money");
+    System.out.println("Kindly choose any option of your choice\n1)Create an account  \n2)Deposit money \n3)Withdraw money \n4)Request for a loan \n5)Transfer money \n6)Status Check");
 
     int choice = userinputs.nextInt();
 
@@ -103,10 +103,10 @@ public static void absa()
             int cash1 = userinputs.nextInt();
 
             switch (cash1) {
-                case 1 -> System.out.println("Business loan Request");
-                case 2 -> System.out.println("Personal loan request");
-                case 3 -> System.out.println("Educational loan request");
-                case 4 -> System.out.println("Mortgage loan request");
+                case 1 -> System.out.println("Business loan Request accepted");
+                case 2 -> System.out.println("Personal loan Request accepted");
+                case 3 -> System.out.println("Educational loan Request accepted");
+                case 4 -> System.out.println("Mortgage loan Request accepted");
                 default -> {
                     System.out.println("Sorry invalid request try again ");
                     try {
@@ -139,11 +139,19 @@ public static void absa()
                     String bankName = userinputs.nextLine();
                     userinputs.nextLine();
 
-                    System.out.println("Enter the account number you wish to send money to:");
+                    System.out.println("Enter the Account No. you wish to send money to:");
                     int accountNumber = userinputs.nextInt();
 
                     System.out.println("Transfer of " + cash + " kenyan shillings to " + accountNumber  +"completed!");
                 }
+                case 6->
+                        {
+                            System.out.println("Enter account number:");
+                            int accountNumber = userinputs.nextInt();
+
+                            System.out.println("Account No: "+accountNumber+ "\nYour balance is: " +balance);
+                            System.out.println("Status check completed!");
+                        }
         default -> {
             System.out.println("Sorry invalid request try again ");
             try {
@@ -184,5 +192,11 @@ public static void absa()
     public void transferMoney()
     {
         super.transferMoney();
+    }
+
+    @Override
+    public void status_check()
+    {
+        super.status_check();
     }
 }

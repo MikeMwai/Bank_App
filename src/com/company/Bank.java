@@ -76,7 +76,11 @@ public class Bank
     }
     public void status_check()
     {
-        System.out.println("Status check ongoing...");
+        System.out.println("Enter account number:");
+        int accountNumber = userinputs.nextInt();
+
+        System.out.println("Your balance is: " +balance);
+        System.out.println("Status check completed!");
     }
     public void loans()
     {
@@ -103,10 +107,10 @@ public class Bank
         int cash1 = userinputs.nextInt();
 
         switch (cash1) {
-            case 1 -> System.out.println("Business loan Request");
-            case 2 -> System.out.println("Personal loan request");
-            case 3 -> System.out.println("Educational loan request");
-            case 4 -> System.out.println("Mortgage loan request");
+            case 1 -> System.out.println("Business loan Request accepted");
+            case 2 -> System.out.println("Personal loan Request accepted");
+            case 3 -> System.out.println("Educational loan Request accepted");
+            case 4 -> System.out.println("Mortgage loan Request accepted");
             default -> {
                 System.out.println("Sorry invalid request try again ");
                 try {
