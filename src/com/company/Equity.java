@@ -9,32 +9,32 @@ public class Equity extends Bank
     public static void equity()
     {
         Scanner userinputs = new Scanner(System.in);
-
+        int choice;
+        Equity equity = new Equity();
         System.out.println("Welcome to Equity Bank!! \nGrowing Together In Trust");
+        do {
+            System.out.println("Kindly choose any option of your choice\n1)Create an account     2)Deposit money \n3)Withdraw money        4)Request for a loan \n5)Transfer money        6)Status Check \n7)Close app");
 
-        System.out.println("Kindly choose any option of your choice\n1)Create an account  \n2)Deposit money \n3)Withdraw money \n4)Request for a loan \n5)Transfer money");
+            choice = userinputs.nextInt();
+            switch (choice) {
+                case 1 -> equity.account_creation();
+                case 2 -> equity.deposits();
+                case 3 -> equity.withdrawals();
+                case 4 -> equity.loans();
+                case 5 -> equity.transferMoney();
+                case 6 -> equity.status_check();
+                case 7 -> System.out.println("Have a Good Day!");
+                default -> {
+                    System.out.println("Sorry invalid request try again ");
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
 
-        int choice = userinputs.nextInt();
-        Equity equity=new Equity();
-
-        switch (choice) {
-            case 1 -> equity.account_creation();
-            case 2 -> equity.deposits();
-            case 3 -> equity.withdrawals();
-            case 4 -> equity.loans();
-            case 5-> equity.transferMoney();
-            case 6->equity.status_check();
-            default ->
-                    {
-                System.out.println("Sorry invalid request try again ");
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e) {
-
-                    e.printStackTrace();
+                        e.printStackTrace();
+                    }
                 }
             }
-        }
+        }while(choice!=7);
     }
     @Override
     public void account_creation()
