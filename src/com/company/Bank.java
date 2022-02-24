@@ -11,7 +11,7 @@ public class Bank {
     int balance = 25000;
     int amount = 0;
 
-    public void account_creation() {
+    public void createAccount() {
         System.out.println("Kindly enter your full name:");
         System.out.println("Enter your first name");
         fname = String.valueOf(userinputs.nextLine());
@@ -38,7 +38,7 @@ public class Bank {
         balance = 0;
     }
 
-    public void deposits() {
+    public void depositAmount() {
         System.out.println("Deposit money");
         System.out.println("Enter account number:");
         int accountNumber = userinputs.nextInt();
@@ -53,7 +53,7 @@ public class Bank {
         }
     }
 
-    public void withdrawals() {
+    public void withdrawAmount() {
         System.out.println("Enter account number:");
         int accountNumber = userinputs.nextInt();
         System.out.println("Enter the amount you wish to withdraw:");
@@ -67,7 +67,7 @@ public class Bank {
         }
     }
 
-    public void status_check() {
+    public void checkStatus() {
         System.out.println("Enter account number:");
         int accountNumber = userinputs.nextInt();
         System.out.println("Account No: "+accountNumber);
@@ -75,7 +75,7 @@ public class Bank {
         System.out.println("Status check completed! \n");
     }
 
-    public void loans() {
+    public void loanAmount() {
         System.out.println("Kindly enter your full name:");
         System.out.println("Enter your first name");
         fname = String.valueOf(userinputs.nextLine());
@@ -113,7 +113,7 @@ public class Bank {
         }
     }
 
-    public void transferMoney() {
+    public void transferAmount() {
         System.out.println("Kindly enter your full name:");
 
         System.out.println("Enter your first name");
@@ -134,7 +134,7 @@ public class Bank {
         int accountNumber = userinputs.nextInt();
 
         balance = balance - amount;
-        System.out.println("Transfer of " + amount + " kenyan shillings to \nAccount No: " + accountNumber + " completed! \n");
+        System.out.println("Transfer of " + amount + " kenyan shillings completed! \nAccount No: " + accountNumber+ "\n");
     }
 
 }

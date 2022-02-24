@@ -17,12 +17,12 @@ public class Equity extends Bank
 
             choice = userinputs.nextInt();
             switch (choice) {
-                case 1 -> equity.account_creation();
-                case 2 -> equity.deposits();
-                case 3 -> equity.withdrawals();
-                case 4 -> equity.loans();
-                case 5 -> equity.transferMoney();
-                case 6 -> equity.status_check();
+                case 1 -> equity.createAccount();
+                case 2 -> equity.depositAmount();
+                case 3 -> equity.withdrawAmount();
+                case 4 -> equity.loanAmount();
+                case 5 -> equity.transferAmount();
+                case 6 -> equity.checkStatus();
                 case 7 -> System.out.println("Have a Good Day!");
                 default -> {
                     System.out.println("Sorry invalid request try again ");
@@ -37,47 +37,47 @@ public class Equity extends Bank
         }while(choice!=7);
     }
     @Override
-    public void account_creation()
+    public void createAccount()
     {
         System.out.println("                    Create a new EQUITY account today!                    ");
         System.out.println("------------------------------------------------------------------------");
-        super.account_creation();
+        super.createAccount();
         System.out.println("Thank you! And Welcome \nWe hope you will enjoy our services!");
     }
 
     @Override
-    public void deposits()
+    public void depositAmount()
     {
         System.out.println("Deposit money easily at EQUITY!");
-        super.deposits();
+        super.depositAmount();
     }
 
     @Override
-    public void withdrawals()
+    public void withdrawAmount()
     {
         System.out.println("Withdraw money easily at EQUITY!");
-        super.withdrawals();
+        super.withdrawAmount();
     }
 
     @Override
-    public void loans()
+    public void loanAmount()
     {
         System.out.println("Request for a loan easily at EQUITY!");
-        super.loans();
+        super.loanAmount();
     }
 
     @Override
-    public void transferMoney()
+    public void transferAmount()
     {
         System.out.println("Transfer money easily at EQUITY!");
-        super.transferMoney();
+        super.transferAmount();
     }
 
     @Override
-    public void status_check()
+    public void checkStatus()
     {
         System.out.println("Monitor your account easily at EQUITY!");
-        super.status_check();
+        super.checkStatus();
     }
 }
 

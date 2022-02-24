@@ -16,12 +16,12 @@ public static void absa() {
 
         choice = userinputs.nextInt();
         switch (choice) {
-            case 1 -> absa.account_creation();
-            case 2 -> absa.deposits();
-            case 3 -> absa.withdrawals();
-            case 4 -> absa.loans();
-            case 5 -> absa.transferMoney();
-            case 6 -> absa.status_check();
+            case 1 -> absa.createAccount();
+            case 2 -> absa.depositAmount();
+            case 3 -> absa.withdrawAmount();
+            case 4 -> absa.loanAmount();
+            case 5 -> absa.transferAmount();
+            case 6 -> absa.checkStatus();
             case 7->System.out.println("Have a Good Day!");
             default -> {
                 System.out.println("Sorry invalid request try again ");
@@ -37,46 +37,46 @@ public static void absa() {
 }
 
     @Override
-    public void account_creation()
+    public void createAccount()
     {
         System.out.println("                    Create a new ABSA account today!                    ");
         System.out.println("------------------------------------------------------------------------");
-        super.account_creation();
+        super.createAccount();
         System.out.println("Thank you! And Welcome \nWe hope you will enjoy our services!");
     }
 
     @Override
-    public void deposits()
+    public void depositAmount()
     {
         System.out.println("Deposit money easily at ABSA!");
-        super.deposits();
+        super.depositAmount();
     }
 
     @Override
-    public void withdrawals()
+    public void withdrawAmount()
     {
         System.out.println("Withdraw money easily at ABSA!");
-        super.withdrawals();
+        super.withdrawAmount();
     }
 
     @Override
-    public void loans()
+    public void loanAmount()
     {
         System.out.println("Request for a loan easily at ABSA!");
-        super.loans();
+        super.loanAmount();
     }
 
     @Override
-    public void transferMoney()
+    public void transferAmount()
     {
         System.out.println("Transfer money easily at ABSA!");
-        super.transferMoney();
+        super.transferAmount();
     }
 
     @Override
-    public void status_check()
+    public void checkStatus()
     {
         System.out.println("Monitor your account easily at ABSA!");
-        super.status_check();
+        super.checkStatus();
     }
 }

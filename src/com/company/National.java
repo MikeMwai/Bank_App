@@ -15,12 +15,12 @@ public class National extends Bank {
             choice = userinputs.nextInt();
 
             switch (choice) {
-                case 1 -> national.account_creation();
-                case 2 -> national.deposits();
-                case 3 -> national.withdrawals();
-                case 4 -> national.loans();
-                case 5 -> national.transferMoney();
-                case 6 -> national.status_check();
+                case 1 -> national.createAccount();
+                case 2 -> national.depositAmount();
+                case 3 -> national.withdrawAmount();
+                case 4 -> national.loanAmount();
+                case 5 -> national.transferAmount();
+                case 6 -> national.checkStatus();
                 case 7 -> System.out.println("Have a Good Day!");
                 default -> {
                     System.out.println("Sorry invalid request try again ");
@@ -36,40 +36,40 @@ public class National extends Bank {
     }
 
     @Override
-    public void account_creation() {
+    public void createAccount() {
         System.out.println("                    Create a new NATIONAL account today!                    ");
         System.out.println("------------------------------------------------------------------------");
-        super.account_creation();
+        super.createAccount();
     }
 
     @Override
-    public void deposits() {
+    public void depositAmount() {
         System.out.println("Deposit money easily at NATIONAL!");
-        super.deposits();
+        super.depositAmount();
     }
 
     @Override
-    public void withdrawals() {
+    public void withdrawAmount() {
         System.out.println("Withdraw money easily at NATIONAL!");
-        super.withdrawals();
+        super.withdrawAmount();
     }
 
     @Override
-    public void loans() {
+    public void loanAmount() {
         System.out.println("Request for a loan easily at NATIONAL!");
-        super.loans();
+        super.loanAmount();
     }
 
     @Override
-    public void transferMoney() {
+    public void transferAmount() {
         System.out.println("Transfer money easily at NATIONAL!");
-        super.transferMoney();
+        super.transferAmount();
     }
 
     @Override
-    public void status_check() {
+    public void checkStatus() {
         System.out.println("Monitor your account easily at NATIONAL!");
-        super.status_check();
+        super.checkStatus();
     }
 }
 
